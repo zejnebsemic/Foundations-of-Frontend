@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 5</title>
+</head>
+<body>
+    <h1 style="color: darkgreen; text-align: center;">IT Center Ticket Form</h1> <br> <hr>
+    <form style="text-align: center;" action="/action_pag4.php" method="post"> 
+        <label for="type_of_probl">Type of Problem: </label>
+        <select name="type_of_probl" id="type_of_probl">
+            <option value="CVct">CV Creator Tool</option>
+            <option value="dataprcon">Data Privacy Concerns</option>
+            <option value="help_and_guidance" selected>Help & Guidance</option>
+            <option value="file_upload_iss">File Upload Issues</option>
+          </select>
+          <p>Select Urgency: </p>
+      <label for="non_urgent">Non urgent</label>
+      <input type="radio" name="select"> <br>
+      <label for="mild">Mild</label>
+      <input type="radio" name="select" checked > <br>
+      <label for="highly_urgent">Highly urgent</label>
+      <input type="radio" name="select"> <br> <br>
+      <label for="file">Upload a Picture(JPG, JPEG, PNG): </label>
+            <input type="file" id="file" name="file" accept="image"> <br> <br>
+            <button type="submit">Submit Ticket</button> 
+</body>
+</html>

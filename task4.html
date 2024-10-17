@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Task 4</title>
+</head>
+<body>
+    <h1 style="color: darkgreen; text-align: center;">CV Data Entry Form</h1> <br> <hr>
+    <fieldset>
+    <legend>Personal Information</legend>
+    <form style="text-align: left;" action="/action_pag4.php" method="post">
+            <label for="name">Full Name: </label>
+            <input type="text" name="name" id="name"> <br> <br>
+            <label for="email">Email: </label>
+            <input type="text" name="email" id="name"> <br> <br>
+            <label for="location">Location</label>
+            <input type="text" name="location" id="location"> <br> <br>
+            <label for="file">Upload Profile Picture: </label>
+            <input type="file" id="file" name="file" accept="image">       
+        </fieldset> <br> <br>
+        <fieldset>
+            <legend>Introduction</legend>
+            <p>Write a short introduction about yourself: </p>
+            <textarea placeholder="Enter_introduction" id="Enter_introduction" rows="8" cols="60" ></textarea>
+        </fieldset> <br> <br>
+        <fieldset>
+            <legend>Skills</legend>
+            <p>Select your skills:</p>
+            <input type="checkbox" id="checkbox" name="html" value="html">
+            <label for="checkbox">HTML</label> <br>
+            <input type="checkbox" id="checkbox" name="css" value="css">
+            <label for="checkbox">CSS</label> <br>
+            <input type="checkbox" id="checkbox" name="javascript" value="javascript">
+            <label for="checkbox">JavaScript</label> <br>
+            <input type="checkbox" id="checkbox" name="react" value="react">
+            <label for="checkbox">React</label> <br>
+            <input type="checkbox" id="checkbox" name="nodejs" value="nodejs">
+            <label for="checkbox">Node.js</label> <br>
+            <input type="checkbox" id="checkbox" name="express" value="express">
+            <label for="checkbox">Express</label> <br>
+            <input type="checkbox" id="checkbox" name="git" value="git">
+            <label for="checkbox">Git</label> <br>
+            <input type="checkbox" id="checkbox" name="wpo" value="wpo">
+            <label for="checkbox">Web Performance Optimization</label>
+        </fieldset>  <br> <br>
+        <fieldset>
+            <legend>Experience</legend>
+            <label for="current_position">Current Position:</label>
+            <input type="text" id="current_position" name="current_position"> <br> <br>
+            <p>Describe your experience: </p>
+            <textarea name="experience" id="experience" rows="8" cols="60" ></textarea>
+        </fieldset> <br> <br> <br>
+        <fieldset>
+            <legend>Education & Certifications</legend>
+            <label for="degree">Degree: </label>
+            <select name="degree" id="degree">
+                <option value="Highschool">Highschool</option>
+                <option value="bdegree">Bachelor degree</option>
+                <option value="gdegree">Graduate degree</option>
+            </select> <br>
+            <p>Certifications: </p> 
+            <textarea name="certific" id="certific" rows="8" cols="60" ></textarea>
+        </fieldset> <br> <br>
+        <fieldset>
+            <legend>Personal Projects</legend>
+            <p>Describe your personal projects:</p>
+            <textarea name="pprojects" id="pprojects" rows="8" cols="60" ></textarea>
+        </fieldset> <br>
+        <button type="submit">Submit CV</button> 
+    </form>
+</body>
+</html>

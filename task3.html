@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 3</title>
+</head>
+<body>
+    <h1 style="color: darkgreen; text-align: center;">CV Creator Tool Feedback Form</h1> <br> <hr>
+    <form style="text-align: center;" action="/action_pag4.php" method="post"> 
+        <label for="email">Email: </label>
+        <input type="text" id="email" name="email" required> <br> <br>
+        <label for="pass">Password: </label>
+        <input type="text" id="pass" name="pass" required> <br> <br>
+        <label for="feedback">Your feedback: </label> <br>
+        <textarea name="feedback" id="feedback" rows="4" cols="50"></textarea> <br>
+        <label for="options">How did you hear abot our CV Creatr Tool?: </label> <br>
+        <select name="options" value="Linkedin">
+            <option value="Facebook">Facebook</option>
+            <option value="Linkedin" selected>Linkedin</option> 
+            <option value="Instagram">Instagram</option>
+            <option value="Tiktop">Tiktok</option>
+            <option value="Other">Other</option>
+        </select> <br> 
+        <label for="newsettler"><u>Sign up for the newsettler</u></label>
+        <input type="checkbox" >
+        <p>Would you use this CV Creator Tool</p>
+            <label for="Yes">Yes</label>
+        <input type="radio" name="select" checked> <br>
+        <label for="No">No</label>
+        <input type="radio" name="select" > <br>
+        <label for="Maybe">Maybe</label>
+        <input type="radio" name="select"> <br>
+        <button type="submit">Submit Feedback</button> 
+    </form>
+</body>
+</html>

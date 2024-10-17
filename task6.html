@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 6</title>
+</head>
+<body>
+    <h1 style="color: darkgreen; text-align: center;">Subscripton Management Form</h1> <br> <hr>
+    <form style="text-align: left;" action="/action_pag4.php" method="post">
+        <fieldset>
+            <legend>Details</legend>
+            <label for="email"><b><u>Email: </u></b></label>
+            <input type="text" name="email" id="email" >
+            <br><br>
+            <label for="link"><b><u>Link: </u></b></label>
+            <input type="text" name="link" id="link">
+            <br><br>
+            <label for="pass"><b><u>Password: </u></b></label>
+            <input type="text" name="pass" id="pass"> 
+            <br>
+        </fieldset> <br> <br> <br>
+        <fieldset>
+            <legend>Reasons for Ending Subscripton</legend>
+            <label for="reason"><b>Select Reasons:</b></label>
+            <select name="reason" id="reason">
+                <option value="bad quality">Bad quality</option>
+                <option value="small size">Small Size</option>
+                <option value="other" selected>Other</option>
+            </select>
+            <br><br><br>
+            <p><i>Would you use one of our other tools?</i></p>
+            <br>
+            <label for="Yes">Yes</label>
+            <input type="radio" name="select" checked> <br>
+            <label for="No">No</label>
+            <input type="radio" name="select" > <br>
+            <label for="Maybe">Maybe</label>
+            <input type="radio" name="select"> 
+            <br> <br>
+            <p>Additional Comments: </p>
+            <br>
+            <textarea name="comm" id="comm" rows="8" cols="60" placeholder="Your comments..."></textarea>
+        </fieldset>
+        <br><br>
+        <button type="submit">Submit</button> 
+</body>
+</html>
