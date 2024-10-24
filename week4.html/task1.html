@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task1</title>
+</head>
+<body>
+    <header>Zejneb Semic</header>
+    <img src="pic.avif" alt="My picture" width="150" height="150">
+<nav>
+    <ul>
+        <li> <a href="aboutme.asp">About me</a></li>
+        <li> <a href="experience.asp">Experience</a></li>
+        <li><a href="skills.asp">Skills</a></li> 
+    </ul> 
+    <hr> 
+</nav>
+<article>
+    <h3>Introduction</h3>
+    <p>Hello! My name is <b>Zejneb Semic</b> and I am a <i>passionate</i> Web developer with over <b><ins>5 years</ins></b> of experience. </p>
+    <hr> 
+    <h4>Your Location</h4>
+    <button onclick="getLocation()">Get My Location</button>
+<p id="location"></p>
+
+<script>
+    function getLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition, showError);
+        } else {
+            document.getElementById("location").innerText = "Geolocation is not supported by this browser.";
+        }
+    }
+
+    function showPosition(position) {
+        document.getElementById("location").innerText = 
+            `Latitude: ${position.coords.latitude}, Longitude: ${position.coords.longitude}`;
+    }
+
+    function showError(error) {
+        switch(error.code) {
+            case error.PERMISSION_DENIED:
+                document.getElementById("location").innerText = "User denied the request for Geolocation.";
+                break;
+            case error.POSITION_UNAVAILABLE:
+                document.getElementById("location").innerText = "Location information is unavailable.";
+                break;
+            case error.TIMEOUT:
+                document.getElementById("location").innerText = "The request to get user location timed out.";
+                break;
+            case error.UNKNOWN_ERROR:
+                document.getElementById("location").innerText = "An unknown error occurred.";
+                break;
+        }
+    }
+</script>
+<p>Click the buttom to get your location. </p>
+<hr>
+<h4>Professional experience</h4>
+<p>Over the past five years, I have worked on numberous web projects, collaborating with clients to build responsive,accesible, and visually appeling websites.</p>
+<footer>
+    <hr>
+    <p>Contact:zejneb.semic@stu.ibu.edu.ba</p>
+    <p>"© 2024 Zejneb Semic"</p>
+</footer>
+</article>
+</body>
+</html>
