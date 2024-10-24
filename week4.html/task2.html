@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task2</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .message {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>User Information Form</h1>
+    <form id="userInfoForm" autocomplete="off">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" required aria-required="true"><br><br>
+        
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" required aria-required="true"><br><br>
+        
+        <label for="jobTitle">Job Title:</label>
+        <input type="text" id="jobTitle" required aria-required="true"><br><br>
+        
+        <button type="submit">Submit</button>
+    </form>
+
+    <div class="message" id="greetingMessage" role="alert"></div>
+
+    <script>
+        const form = document.getElementById('userInfoForm');
+        const greetingMessage = document.getElementById('greetingMessage');
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            const firstName = document.getElementById('firstName').value;
+            const lastName = document.getElementById('lastName').value;
+            const jobTitle = document.getElementById('jobTitle').value;
+            localStorage.setItem('firstName', firstName);
+            localStorage.setItem('lastName', lastName);
+            greetingMessage.textContent = `Hello, ${firstName} ${lastName}, ${jobTitle}!`;
+            form.reset();
+        });
+    </script>
+
+</body>
+</html>
+
